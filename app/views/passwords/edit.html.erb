@@ -1,10 +1,6 @@
-<div class="d-flex align-items-center justify-content-center">
-  <h1>Sign Up</h1>
-</div>
-  
-<br/>
+<h1>Edit Your God Damn Password For Fudge Cake</h1>
 
-<%= form_with model: @user, url: sign_up_path do |form| %> 
+<%= form_with model: Current.user, url: edit_password_path do |form| %>
   <% if form.object.errors.any? %>
     <div class="mb-3">
       <div class="alert alert-danger">
@@ -16,29 +12,16 @@
   <% end %>
 
   <div class="mb-3">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control", placeholder: "ojej@wp.pl" %>
-  </div>
-
-  <br/>
-
-  <div class="mb-3">
     <%= form.label :password %>
     <%= form.password_field :password, class: "form-control", placeholder: "Password" %>
   </div>
-
-  <br/>
 
   <div class="mb-3">
     <%= form.label :password_confirmation %>
     <%= form.password_field :password_confirmation, class: "form-control", placeholder: "Password" %>
   </div>
-
+  
   <div class="mb-3">
-    <%= form.submit "Sign Up", class: "btn btn-primary" %>
+    <%= form.submit "Update Password", class: "btn btn-primary" %>
   </div>
 <% end %>
- 
-
-
-
